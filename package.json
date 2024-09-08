@@ -5,6 +5,9 @@
     "scripts": {
       "build": "npx tsc"
     },
+    "engines": {
+  "node": "20.x"  
+},
     "author": "John Doe",
     "license": "ISC",
     "devDependencies": {
