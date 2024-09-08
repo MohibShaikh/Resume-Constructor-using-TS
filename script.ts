@@ -1,14 +1,13 @@
-// TypeScript Code (script.ts)
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement;
-    const skillsSection = document.getElementById('skills') as HTMLDivElement;
+    const skillsList = document.getElementById('resume-skills') as HTMLUListElement;
     const updateResumeButton = document.getElementById('update-resume') as HTMLButtonElement;
 
     toggleSkillsButton?.addEventListener('click', () => {
-        if (skillsSection?.style.display === 'none') {
-            skillsSection.style.display = 'block';
+        if (skillsList?.style.display === 'none' || skillsList?.style.display === '') {
+            skillsList.style.display = 'block';
         } else {
-            skillsSection.style.display = 'none';
+            skillsList.style.display = 'none';
         }
     });
 
