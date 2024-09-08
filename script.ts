@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const education = (document.getElementById('education') as HTMLInputElement).value;
         const skillsInput = (document.getElementById('skills-input') as HTMLInputElement).value;
         const experience = (document.getElementById('experience') as HTMLTextAreaElement).value;
+        const linkedin = (document.getElementById('resume-linkedin') as HTMLTextAreaElement).value;
+
 
         // Update the resume sections
         document.getElementById('resume-name')!.textContent = name;
@@ -25,5 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('resume-education')!.textContent = education;
         document.getElementById('resume-skills')!.innerHTML = skillsInput.split(',').map(skill => `<li>${skill.trim()}</li>`).join('');
         document.getElementById('resume-work-experience')!.textContent = experience;
+        document.getElementById('resume-linkedin')!.textContent = `LinkedIn: ${linkedin}`;
     });
 });
