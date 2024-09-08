@@ -37,7 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     downloadPdfButton?.addEventListener('click', () => {
-        const { jsPDF } = window.jspdf;
+        if (typeof window['jspdf'] === 'undefined') {
+            console.error('jsPDF is not loaded.');
+            return;
+        }
+
+        const { jsPDF } = window['jspdf']; // Cast to `any` to bypass TypeScript error
         const doc = new jsPDF();
 
         // Generate PDF content
