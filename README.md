@@ -5,7 +5,7 @@ Welcome to our hackathon project, which consists of two parts: an **Interactive 
 
 ## Overview
 
-This project is divided into two major milestones:
+This project is divided into 4 major milestones:
 
 
 
@@ -23,7 +23,7 @@ This project is divided into two major milestones:
 
 ### Deployment
 
-The webapp is deployed [here](hhttps://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app) . Click the highlighted link to check out or thorugh this link [https://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app](https://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app)
+The webapp is deployed [here](https://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app) . Click the highlighted link to check out or thorugh this link [https://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app](https://resume-constructor-using-4vr41b1sq-mohibzzs-projects.vercel.app)
 
 ---
 
