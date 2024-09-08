@@ -1,8 +1,6 @@
 import jsPDF from 'jspdf';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const { jsPDF } = window.jspdf;
-
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement | null;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement | null;
     const updateResumeButton = document.getElementById('update-resume') as HTMLButtonElement | null;
