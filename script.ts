@@ -1,3 +1,4 @@
+const { jsPDF } = require("jspdf");
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement;
