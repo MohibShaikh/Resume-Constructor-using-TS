@@ -1,5 +1,3 @@
-import { jsPDF } from 'jspdf';
-
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement;
@@ -39,15 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     downloadPdfButton?.addEventListener('click', () => {
+        const { jsPDF } = window as any; // Cast to `any` to bypass TypeScript error
         const doc = new jsPDF();
-        doc.text('Interactive Resume Builder', 10, 10);
-        doc.text(`Name: ${document.getElementById('resume-name')!.textContent}`, 10, 20);
-        doc.text(`Contact: ${document.getElementById('resume-contact')!.textContent}`, 10, 30);
-        doc.text(`Education: ${document.getElementById('resume-education')!.textContent}`, 10, 40);
-        doc.text(`Skills: ${document.getElementById('resume-skills')!.textContent}`, 10, 50);
-        doc.text(`Work Experience: ${document.getElementById('resume-work-experience')!.textContent}`, 10, 60);
-        doc.text(`LinkedIn: ${document.getElementById('resume-linkedin')!.textContent}`, 10, 70);
 
+        // Generate PDF content
+        doc.text(document.getElementById('resume-name')!.textContent || '', 10, 10);
+        doc.text(document.getElementById('resume-contact')!.textContent || '', 10, 20);
+        doc.text(document.getElementById('resume-education')!.textContent || '', 10, 30);
+        doc.text(document.getElementById('resume-skills')!.innerText || '', 10, 40);
+        doc.text(document.getElementById('resume-work-experience')!.textContent || '', 10, 50);
+
+        // Save the PDF
         doc.save('resume.pdf');
+
     });
 });
