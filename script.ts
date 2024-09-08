@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('download-pdf')?.addEventListener('click', () => {
             const doc = new jsPDF();
             
-            // Capture resume content
             const name = (document.getElementById('resume-name') as HTMLElement).textContent;
             const contact = (document.getElementById('resume-contact') as HTMLElement).textContent;
             const education = (document.getElementById('resume-education') as HTMLElement).textContent;
