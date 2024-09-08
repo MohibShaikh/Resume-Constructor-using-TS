@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Resume</title>
+    <title>Interactive Resume Builder</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <div class="container">
+    <header>
+        <h1>Interactive Resume Builder</h1>
+    </header>
+
+    <main class="container">
         <!-- Personal Information Section -->
         <section id="personal-info">
             <img src="assets/profile-pic.jpg" alt="Profile Picture" id="profile-picture">
-            <h1 id="resume-name">John Doe</h1>
+            <h2 id="resume-name">John Doe</h2>
             <p id="resume-contact">Contact: johndoe@example.com | (123) 456-7890</p>
             <p id="resume-linkedin">LinkedIn: linkedin.com/in/johndoe</p>
         </section>
@@ -32,8 +36,8 @@
                 <li>React.js</li>
                 <li>Node.js</li>
             </ul>
+            <button id="toggle-skills-btn">Toggle Skills</button>
         </section>
-        <button id="toggle-skills-btn">Toggle Skills</button>
 
         <!-- Work Experience Section -->
         <section id="work-experience">
@@ -76,7 +80,11 @@
                 <button type="button" id="update-resume">Update Resume</button>
             </form>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Interactive Resume Builder. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
