@@ -66,4 +66,4 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.save('resume.pdf');
         });
     });
-});
+
