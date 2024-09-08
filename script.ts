@@ -1,5 +1,3 @@
-import jsPDF from 'jspdf';
-
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement | null;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement | null;
@@ -59,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (downloadPdfButton) {
         downloadPdfButton.addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;  // Use jsPDF from the loaded script
             const doc = new jsPDF();
             
             const name = (document.getElementById('resume-name') as HTMLElement).textContent || '';
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const skills = (document.getElementById('resume-skills') as HTMLElement).innerText || '';
             const experience = (document.getElementById('resume-work-experience') as HTMLElement).textContent || '';
             const linkedin = (document.getElementById('resume-linkedin') as HTMLElement).textContent || '';
-
+    
             doc.setFontSize(16);
             doc.text(name, 10, 10);
             doc.setFontSize(12);
@@ -82,4 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
             doc.save('resume.pdf');
         });
     }
+    
 });
