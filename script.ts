@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadPdfButton?.addEventListener('click', () => {
 
         const { jsPDF } = window['jspdf']; // Cast to `any` to bypass TypeScript error
-        const doc = new jsPDF();
+        const doc = new jsPDF('p');
 
         // Generate PDF content
         doc.text(document.getElementById('resume-name')!.textContent || '', 10, 10);
