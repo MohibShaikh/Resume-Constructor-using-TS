@@ -12,6 +12,13 @@ body {
     color: #333;
 }
 
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* Header Styles */
 header {
     background: linear-gradient(90deg, #003366, #00509e);
@@ -22,44 +29,44 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
 }
 
-/* Personal Information Styles */
-.personal-info {
+/* Personal Information Section */
+#personal-info {
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
 }
 
-.personal-info img {
+#personal-info img {
     border-radius: 50%;
     border: 5px solid #00509e;
     width: 120px;
     height: 120px;
 }
 
-.personal-info h2 {
+#resume-name {
     margin-top: 10px;
     font-size: 1.8em;
 }
 
-.personal-info p {
+#resume-contact, #resume-linkedin {
     margin: 5px 0;
 }
 
 /* Section Styles */
 section {
     background: white;
-    margin: 20px auto;
+    margin: 20px 0;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-section h3 {
+section h2 {
     border-bottom: 2px solid #00509e;
-    padding-bottom: 10px;
     margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
 }
 
 /* List Styles */
@@ -68,23 +75,25 @@ ul {
     margin-left: 20px;
 }
 
-/* Skills Toggle Button */
-.toggle-skills {
+/* Skills Section */
+#skills button {
     background-color: #00509e;
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 4px;
+    margin-top: 10px;
 }
 
-.toggle-skills:hover {
+#skills button:hover {
     background-color: #003366;
 }
 
 /* Dynamic Resume Form Styles */
 form {
-    margin: 20px auto;
+    margin: 20px 0;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -131,9 +140,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -142,7 +149,7 @@ footer {
         font-size: 2em;
     }
 
-    .personal-info img {
+    #personal-info img {
         width: 100px;
         height: 100px;
     }
