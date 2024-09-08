@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Interactive Resume Builder using HTML, CSS, and TypeScript",
     "scripts": {
-      "build": "tsc"
+      "build": "npx tsc"
     },
     "author": "John Doe",
     "license": "ISC",
