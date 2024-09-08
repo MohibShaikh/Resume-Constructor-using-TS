@@ -1,3 +1,4 @@
+import jsPDF from 'jspdf';
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement;
@@ -41,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    downloadPdfButton?.addEventListener('click', () => {
-        import('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js').then(jsPDF => {
-            const { jsPDF } = jsPDF;
+    document.getElementById('download-pdf')?.addEventListener('click', () => {
             const doc = new jsPDF();
             
             // Capture resume content
