@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     downloadPdfButton?.addEventListener('click', () => {
-                // Ensure jsPDF is loaded
         if (typeof window['jspdf'] === 'undefined') {
             console.error('jsPDF is not loaded.');
             return;
