@@ -11,22 +11,22 @@
         <!-- Personal Information Section -->
         <section id="personal-info">
             <img src="assets/profile-pic.jpg" alt="Profile Picture" id="profile-picture">
-            <h1>John Doe</h1>
-            <p>Contact: johndoe@example.com | (123) 456-7890</p>
-            <p>LinkedIn: linkedin.com/in/johndoe</p>
+            <h1 id="resume-name">John Doe</h1>
+            <p id="resume-contact">Contact: johndoe@example.com | (123) 456-7890</p>
+            <p id="resume-linkedin">LinkedIn: linkedin.com/in/johndoe</p>
         </section>
 
         <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
-            <p>Bachelor of Science in Computer Science</p>
-            <p>University of XYZ, Graduated: 2022</p>
+            <p id="resume-education">Bachelor of Science in Computer Science</p>
+            <p id="resume-graduated">University of XYZ, Graduated: 2022</p>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
+            <ul id="resume-skills">
                 <li>JavaScript</li>
                 <li>TypeScript</li>
                 <li>React.js</li>
@@ -38,8 +38,8 @@
         <!-- Work Experience Section -->
         <section id="work-experience">
             <h2>Work Experience</h2>
-            <p>Software Developer, XYZ Corp. (2022-Present)</p>
-            <ul>
+            <p id="resume-work-experience">Software Developer, XYZ Corp. (2022-Present)</p>
+            <ul id="resume-experience-details">
                 <li>Developed interactive web applications using React and Node.js.</li>
                 <li>Collaborated with cross-functional teams to deliver project goals.</li>
             </ul>
@@ -48,7 +48,7 @@
         <!-- Dynamic Resume Form -->
         <section id="resume-form">
             <h2>Build Your Resume</h2>
-            <form id="resume-form">
+            <form id="form">
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label for="name">Name:</label>
@@ -65,8 +65,8 @@
                 </fieldset>
                 <fieldset>
                     <legend>Skills</legend>
-                    <label for="skills">Skills (comma separated):</label>
-                    <input type="text" id="skills" name="skills">
+                    <label for="skills-input">Skills (comma separated):</label>
+                    <input type="text" id="skills-input" name="skills">
                 </fieldset>
                 <fieldset>
                     <legend>Work Experience</legend>
