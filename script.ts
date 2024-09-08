@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills-btn') as HTMLButtonElement;
     const skillsList = document.getElementById('resume-skills') as HTMLUListElement;
     const updateResumeButton = document.getElementById('update-resume') as HTMLButtonElement;
+    
+    const linkedinUrlPattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+$/;
+
 
     toggleSkillsButton?.addEventListener('click', () => {
         if (skillsList?.style.display === 'none' || skillsList?.style.display === '') {
@@ -27,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('resume-education')!.textContent = education;
         document.getElementById('resume-skills')!.innerHTML = skillsInput.split(',').map(skill => `<li>${skill.trim()}</li>`).join('');
         document.getElementById('resume-work-experience')!.textContent = experience;
-        document.getElementById('resume-linkedin')!.textContent = `LinkedIn: ${linkedin}`;
+        // Validate LinkedIn URL and update if valid
+        if (linkedinUrlPattern.test(linkedin)) {
+            document.getElementById('resume-linkedin')!.textContent = `LinkedIn: ${linkedin}`;
+        } else {
+            document.getElementById('resume-linkedin')!.textContent = `LinkedIn URL is not valid`;
+        }
     });
 });
